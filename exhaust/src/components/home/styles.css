@@ -55,7 +55,7 @@ button {
     border: none;
     margin-top: 35px;
     margin-top: 15px;
-    width: 90%;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -63,11 +63,12 @@ button {
     background-color: #d1d1d1;
     color: rgb(0, 0, 0);
     padding: 5px 5px;
-    margin-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 10px;
     border: none;
     cursor: pointer;
-    width: 95%;
+    width: 90%;
     outline: #575757;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -99,3 +100,78 @@ th {
 }
 
 tr:hover {background-color: rgb(199, 199, 199);}
+
+.yourimpact{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: none;
+    margin-top: 35px;
+    margin-top: 15px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subtitle{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: none;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.history{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: none;
+    margin-top: 35px;
+    margin-left: 10px;
+    font-size: 26px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.total{
+    color: rgb(124, 124, 124);
+    text-align: center;
+    border: none;
+    margin-top: 5px;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reduced{
+    color: rgb(124, 124, 124);
+    text-align: center;
+    border: none;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.produced{
+    color: rgb(124, 124, 124);
+    text-align: center;
+    border: none;
+    margin-top: 5px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blue{
+    text-align: center;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.red{
+    text-align: center;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}

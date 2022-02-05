@@ -1,4 +1,4 @@
-button {
+.login {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -27,14 +27,16 @@ h2{
 }
 
 .register{
-    background-color: #155fff;
+    background-color: #1c66d4;
     color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
 }
 
-input, select {
+.inputForm, .dropdown {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

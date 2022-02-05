@@ -136,8 +136,8 @@ export default function HomePage() {
 					{/* Impact */}
 					<hr className='hr' />
 					<div className='col-5 mb-4'>
-						<h2 className='mb-4 text-center'>Your Impact</h2>
-						<h5 className='text-center text-muted fw-normal'>Recorded CO2</h5>
+						<h2 className='yourimpact'>Your Impact</h2>
+						<h5 className='subtitle  text-muted fw-normal'>Recorded CO2</h5>
 						{history === 'loading' ? (
 							<div class='spinner-border d-flex mx-auto mt-5' role='status'>
 								<span class='visually-hidden'>Loading...</span>
@@ -145,7 +145,7 @@ export default function HomePage() {
 						) : (
 							<Overview history={history} />
 						)}
-						<h5 className='text-center text-muted fw-normal my-4'>History</h5>
+						<h5 className='history text-muted fw-normal my-4'>History</h5>
 						<CountryHistoryChart data={placeholderHistoryData} />
 					</div>
 					
@@ -158,6 +158,7 @@ export default function HomePage() {
 								<span className='visually-hidden'>Loading...</span>
 							</div>
 						) : (
+							
 							history.map(el => (
 								<table className='table'>
 									<tr className='d-flex align-items-center'>
@@ -188,7 +189,7 @@ function Overview({ history }) {
 
 	return (
 		<>
-			<div className='overview-container'>
+			<div className='produced overview-container'>
 				<div className='text-center'>
 					<p className='mb-0 text-muted'>Produced</p>
 					<h5 className='red'>
@@ -198,11 +199,11 @@ function Overview({ history }) {
 						kg
 					</h5>
 				</div>
-				<div className='text-center'>
+				<div className='total text-center'>
 					<p className='mb-0 text-muted'>Total</p>
 					<h2 className={total > 0 ? 'red' : 'blue'}>{total}kg</h2>
 				</div>
-				<div className='text-center'>
+				<div className='reduced text-center'>
 					<p className='mb-0 text-muted'>Reduced</p>
 					<h5 className='blue'>
 						{history

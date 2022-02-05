@@ -51,7 +51,7 @@ export default function Login() {
 						value={name}
 						type='name'
 						onChange={e => setName(e.target.value)}
-						className='form-control my-3'
+						className='inputForm my-3'
 						placeholder='Name'
 					/>
 				)}
@@ -59,14 +59,14 @@ export default function Login() {
 				<input
 					value={email}
 					onChange={e => setEmail(e.target.value)}
-					className='form-control my-3'
+					className='inputForm my-3'
 					placeholder='Email'
 				/>
 				{isRegister && (
-					<select
+					<select 
 						value={country}
 						placeholder='Country'
-						className='form-select my-3'
+						className='dropdown my-3'
 						onChange={e => setCountry(e.target.value)}>
 						<option selected>Country</option>
 						{countries.map(el => (
@@ -74,16 +74,16 @@ export default function Login() {
 						))}
 					</select>
 				)}
-				<input
+				<input 
 					value={password}
 					type='password'
 					onChange={e => setPassword(e.target.value)}
-					className='form-control my-3'
+					className='inputForm my-3'
 					placeholder='Password'
 				/>
-				<button
+				<button className="login"
 					onClick={isRegister ? register : login}
-					className='btn btn-dark w-100 mt-3 mb-2'>
+					className='login btn-dark w-100 mt-3 mb-2'>
 					{isRegister ? 'Register' : 'Login'}
 				</button>
 				
