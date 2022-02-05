@@ -7,11 +7,11 @@ const rawData = [
 	['Fruits & Veggies', 'kg', 0.4],
 	['Recycle Plastic', '1g', -0.008],
 	['Recycle Glass', 'kg', -0.67],
-	['Plant a Tree', 'year', -20],
+	['Plant a Tree', '#', -20],
 	['Using Elecrticity', 'kWh', 0.45],
 	['Phone Call', 'min', 0.057],
 	['Use Air Conditioner', 'hour', 0.65],
-	['Use Plastic Bag', '', 0.033]
+	['Use Plastic Bag', '#', 0.033]
 ];
 
 const itemScoreBoard = rawData.map(el => ({

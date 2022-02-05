@@ -3,6 +3,7 @@ import Axios from '../../utils/Axios';
 import { itemScoreBoard } from '../../utils/Data';
 import moment from 'moment';
 import CountryHistoryChart from '../charts/CountriesChart';
+import "./styles.css";
 
 // The only reason this exists is because the actual histroy is very empty and the chart doesn't look like much of a chart
 // TLDR this is here for visual reasons (the endpoint itself works perfectly)
@@ -74,8 +75,8 @@ export default function HomePage() {
 
 	return (
 		<div className='page-container mx-auto p-5 shadow'>
-			<div className='row mb-3 justify-content-around'>
-				<div className='col-5'>
+			<div className='inner-container row mb-3 justify-content-around'>
+				<div className='inner-container'>
 					<h2 className='mb-4'>Add Entry</h2>
 					<div className='input-group'>
 						<select
@@ -102,7 +103,12 @@ export default function HomePage() {
 								{itemScoreBoard[selectedActivity].unit}
 							</label>
 						) : null}
+
+						<button onClick={submitEntry} className='btn btn-outline-secondary col-2'>
+							Add
+						</button>
 					</div>
+
 
 					<div className='input-group mt-3'>
 						<label className='input-group-text col-5 d-flex' for='inputGroupSelect02'>
@@ -125,15 +131,12 @@ export default function HomePage() {
 									) + 'kg'}
 							</strong>
 						</label>
-						<button onClick={submitEntry} className='btn btn-outline-secondary col-2'>
-							Add
-						</button>
 					</div>
 
 					{/* HISTORY */}
 
 					<hr className='hr' />
-					<h2 className='mb-4 mt-0'>My Activity</h2>
+					<h2 className='myactivity'>My Activity</h2>
 					{history === 'loading' ? (
 						<div className='spinner-border d-block mx-auto mt-5' role='status'>
 							<span className='visually-hidden'>Loading...</span>
@@ -144,8 +147,7 @@ export default function HomePage() {
 								<span className='d-flex align-items-center'>
 									<strong>{el.name}</strong>
 									<span className='mx-2 mr-0'>
-										x {el.amount}
-										{el.unit}
+										 : {el.amount}  :  {el.unit}
 									</span>
 								</span>
 

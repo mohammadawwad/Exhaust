@@ -1,0 +1,63 @@
+.page-container {
+    padding: 50px, 50px;
+}
+
+.inner-container{
+    padding: 50px, 50px;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    margin: 8px 10px;
+    margin-top: 15px;
+    width: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #04AA6D;
+    color: rgb(0, 0, 0);
+    padding: 10px 5px;
+    margin: 8px 0;
+    margin-left: 15px;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+
+.input-group-text{
+    background-color: #bfc4c2;
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    outline: #575757;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myactivity{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-top: 15px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
