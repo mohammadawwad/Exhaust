@@ -143,17 +143,22 @@ export default function HomePage() {
 						</div>
 					) : (
 						history.map(el => (
-							<div className='history-item my-3 rounded border px-3 py-2 d-flex justify-content-between'>
-								<span className='d-flex align-items-center'>
-									<strong>{el.name}</strong>
-									<span className='mx-2 mr-0'>
-										 : {el.amount}  :  {el.unit}
-									</span>
-								</span>
-
-								<span>{moment(el.createdAt).format('HH:MM - DD. MMM')}</span>
-								<strong>CO2: {el.co2}kg</strong>
-							</div>
+							<table className='table'>
+								<tr className='d-flex align-items-center'>
+									<th>Activity</th>
+									<th>Amount</th>
+									<th>CO2</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>{el.name}</td>
+									<td className='table1'>
+										 : {el.amount} {el.unit}
+									</td>
+									<td>{el.co2}kg</td>
+									<td>{moment(el.createdAt).format('DD. MMM')}</td>
+								</tr>
+							</table>
 						))
 					)}
 				</div>
