@@ -133,48 +133,51 @@ export default function HomePage() {
 						</label>
 					</div>
 
-					{/* HISTORY */}
-
+					{/* Impact */}
 					<hr className='hr' />
-					<h2 className='myactivity'>My Activity</h2>
-					{history === 'loading' ? (
-						<div className='spinner-border d-block mx-auto mt-5' role='status'>
-							<span className='visually-hidden'>Loading...</span>
-						</div>
-					) : (
-						history.map(el => (
-							<table className='table'>
-								<tr className='d-flex align-items-center'>
-									<th>Activity</th>
-									<th>Amount</th>
-									<th>CO2</th>
-									<th>Date</th>
-								</tr>
-								<tr>
-									<td>{el.name}</td>
-									<td className='table1'>
-										 : {el.amount} {el.unit}
-									</td>
-									<td>{el.co2}kg</td>
-									<td>{moment(el.createdAt).format('DD. MMM')}</td>
-								</tr>
-							</table>
-						))
-					)}
-				</div>
-				<div className='col-5 mb-4'>
-					<h2 className='mb-4 text-center'>Your Impact</h2>
-					<h5 className='text-center text-muted fw-normal'>Recorded CO2</h5>
-					{history === 'loading' ? (
-						<div class='spinner-border d-flex mx-auto mt-5' role='status'>
-							<span class='visually-hidden'>Loading...</span>
-						</div>
-					) : (
-						<Overview history={history} />
-					)}
-					<h5 className='text-center text-muted fw-normal my-4'>History</h5>
-					<CountryHistoryChart data={placeholderHistoryData} />
-				</div>
+					<div className='col-5 mb-4'>
+						<h2 className='mb-4 text-center'>Your Impact</h2>
+						<h5 className='text-center text-muted fw-normal'>Recorded CO2</h5>
+						{history === 'loading' ? (
+							<div class='spinner-border d-flex mx-auto mt-5' role='status'>
+								<span class='visually-hidden'>Loading...</span>
+							</div>
+						) : (
+							<Overview history={history} />
+						)}
+						<h5 className='text-center text-muted fw-normal my-4'>History</h5>
+						<CountryHistoryChart data={placeholderHistoryData} />
+					</div>
+					
+
+					{/* Activity */}
+					<hr className='hr' />
+						<h2 className='myactivity'>My Activity</h2>
+						{history === 'loading' ? (
+							<div className='spinner-border d-block mx-auto mt-5' role='status'>
+								<span className='visually-hidden'>Loading...</span>
+							</div>
+						) : (
+							history.map(el => (
+								<table className='table'>
+									<tr className='d-flex align-items-center'>
+										<th>Activity</th>
+										<th>Amount</th>
+										<th>CO2</th>
+										<th>Date</th>
+									</tr>
+									<tr>
+										<td>{el.name}</td>
+										<td className='table1'>
+											: {el.amount} {el.unit}
+										</td>
+										<td>{el.co2}kg</td>
+										<td>{moment(el.createdAt).format('DD. MMM')}</td>
+									</tr>
+								</table>
+							))
+						)}
+					</div>
 			</div>
 		</div>
 	);
