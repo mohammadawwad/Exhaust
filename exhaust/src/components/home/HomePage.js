@@ -74,7 +74,7 @@ export default function HomePage() {
 	}
 
 	return (
-		<div className='page-container mx-auto p-5 shadow'>
+		<div className='page mx-auto p-5 shadow' style={{ width: "100%"}}>
 			<div className='inner-container row mb-3 justify-content-around'>
 				<div className='inner-container'>
 					<h2 className='mb-4'>Add Entry</h2>
@@ -114,7 +114,7 @@ export default function HomePage() {
 
 					<div className='input-group mt-3'>
 						<label className='input-group-text col-5 d-flex' for='inputGroupSelect02'>
-							<span className='d-block' style={{ marginRight: '0.4rem' }}>
+							<span className='d-block' >
 								CO2 / Unit:
 							</span>
 							<strong className='d-block'>
@@ -123,7 +123,7 @@ export default function HomePage() {
 							</strong>
 						</label>
 						<label className='input-group-text col-5 d-flex' for='inputGroupSelect02'>
-							<span style={{ marginRight: '0.4rem' }} className='d-block'>
+							<span  className='d-block'>
 								Total:{' '}
 							</span>
 							<strong className='d-block'>
@@ -142,14 +142,20 @@ export default function HomePage() {
 					<div className='col-5 mb-4'>
 						<h2 className='yourimpact'>Your Impact</h2>
 						<h5 className='subtitle  text-muted fw-normal'>Recorded CO2</h5>
+
 						{history === 'loading' ? (
 							<div class='spinner-border d-flex mx-auto mt-5' role='status'>
 								<span class='visually-hidden'>Loading...</span>
 							</div>
 						) : (
+							<>
 							<Overview history={history} />
+							<p className="intro">Here you can see your total carbon emmisions you have created, on the left you can see the total amount of carbon produced from your activities in red. On the right hand side you can see how much carbon you have reduced in blue, this could be done by planting trees and recycling. In the middile the total shows you difference between the carbon you have produced and reduced. If it is red that means you are producing to much carbon and if it was blue that means you have negative carbon emission meaning you are doing great.</p>
+							</>
 						)}
+						<hr className='hr' />
 						<h5 className='history text-muted fw-normal my-4'>History</h5>
+						<p className="intro">All CO2 emmisions based of the last 30 days in your country</p>
 						<CountryHistoryChart data={placeholderHistoryData} />
 					</div>
 					
@@ -157,6 +163,17 @@ export default function HomePage() {
 					{/* Activity */}
 					<hr className='hr' />
 						<h2 className='myactivity'>My Activity</h2>
+						<p className="intro">Here you can view all the details regarding the activity you submited such as what you were doing, how much CO2 you pruduced and what day it was. You can also edit and delete them whenever you want.</p>
+
+						<table className="firstRow">
+							<tr className='d-flex align-items-center'>
+								<th>Activity:</th>
+								<th>Amount:</th>
+								<th>CO2:</th>
+								<th>Date:</th>
+							</tr>
+						</table>
+
 						{history === 'loading' ? (
 							<div className='spinner-border d-block mx-auto mt-5' role='status'>
 								<span className='visually-hidden'>Loading...</span>
@@ -165,16 +182,10 @@ export default function HomePage() {
 							
 							history.map(el => (
 								<table className='table'>
-									<tr className='d-flex align-items-center'>
-										<th>Activity</th>
-										<th>Amount</th>
-										<th>CO2</th>
-										<th>Date</th>
-									</tr>
 									<tr>
 										<td>{el.name}</td>
 										<td className='table1'>
-											: {el.amount} {el.unit}
+											{el.amount} {el.unit}
 										</td>
 										<td>{el.co2}kg</td>
 										<td>{moment(el.createdAt).format('DD. MMM')}</td>
@@ -182,7 +193,7 @@ export default function HomePage() {
 								</table>
 							))
 						)}
-					</div>
+				</div>
 			</div>
 		</div>
 	);

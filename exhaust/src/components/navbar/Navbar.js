@@ -30,6 +30,11 @@ export default function Navbar(props) {
 							Stats
 						</Link>
 					</li>
+					<li className='nav-item'>
+						<Link className='nav-link' to='/stats'>
+							About Us
+						</Link>
+					</li>
 					<li className='logout' onClick={logout}>
 						<Link className='logout' to='/'>
 							Logout

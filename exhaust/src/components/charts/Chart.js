@@ -84,7 +84,7 @@ export default function BarChart({ data }) {
 	return (
 		<div style={{width: '100%', height: "100%"}}>
 			<h2 className="graphTitle">Total Carbon Emission Per Country</h2>
-			<Chart options={options} series={series} type='bar' height={300} />
+			<Chart options={options} series={series} type='bar' height={350} />
 		</div>
 	);
 }
