@@ -1,18 +1,18 @@
 import './App.scss';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LoginPage from './components/Login';
-import Navbar from './components/Navbar';
-import HomePage from './components/HomePage';
+import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import LoginPage from './components/register/LoginPage';
+import Navbar from './components/navbar/Navbar';
+import HomePage from './components/home/HomePage';
 import { useEffect, useState } from 'react';
-import axiosApp from './utils/axiosApp';
-import StatsPage from './components/StatsPage';
+import Axios from './utils/Axios';
+import Dashboard from './components/dashboard/dashboard';
 
 function App() {
 	const [isAuthed, setIsAuthed] = useState('loading');
 
 	useEffect(() => {
 		(async function () {
-			const { data } = await axiosApp.get('/status');
+			const { data } = await Axios.get('/status');
 			console.log(data);
 			setIsAuthed(data.isAuthed);
 		})();
@@ -30,9 +30,10 @@ function App() {
 		<div>
 			<Router>
 				<Navbar />
+
 				<Switch>
 					<Route path='/' exact component={HomePage} />
-					<Route path='/stats' exact component={StatsPage} />
+					<Route path='/stats' exact component={Dashboard} />
 				</Switch>
 			</Router>
 		</div>

@@ -1,0 +1,58 @@
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.register{
+    background-color: #155fff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+img.avatar {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.login-panel {
+    padding: 16px;
+}
