@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Chart from 'react-apexcharts';
 import { countries } from '../../utils/Data';
+import "./styles.css";
 
 export default function BarChart({ data }) {
 	console.log(data);
@@ -81,9 +82,9 @@ export default function BarChart({ data }) {
 	});
 
 	return (
-		<div>
-			<h2>Total carbon emission per country</h2>
-			<Chart options={options} series={series} type='bar' height={600} />
+		<div style={{width: '100%', height: "100%"}}>
+			<h2 className="graphTitle">Total Carbon Emission Per Country</h2>
+			<Chart options={options} series={series} type='bar' height={300} />
 		</div>
 	);
 }

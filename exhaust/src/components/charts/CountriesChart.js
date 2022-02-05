@@ -75,7 +75,7 @@ export default function HistoryChart({ data }) {
 	});
 
 	return (
-		<div id='chart'>
+		<div id='countireisChart'>
 			<Chart options={options} series={series} type='area' height={350} />
 		</div>
 	);

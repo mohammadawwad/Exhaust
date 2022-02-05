@@ -20,8 +20,8 @@ export default function StatsPage() {
 	}, []);
 
 	return (
-		<div className='page-container mx-auto p-5 shadow'>
-			<div>
+		<div className='page-container mx-auto p-5 shadow' style={{maxWidth: '120rem', width: "100%"}}>
+			<div style={{width: '100%'}}>
 				{data === 'loading' ? (
 					<div className='total-center'>
 						<div class='spinner-border' role='status'>
@@ -29,7 +29,7 @@ export default function StatsPage() {
 						</div>
 					</div>
 				) : (
-					<Chart data={data} />
+					<Chart data={data} style={{width: '100%'}}/>
 				)}
 			</div>
 		</div>

@@ -108,7 +108,9 @@ export default function HomePage() {
 							Add
 						</button>
 					</div>
+				</div>
 
+				<div>
 
 					<div className='input-group mt-3'>
 						<label className='input-group-text col-5 d-flex' for='inputGroupSelect02'>
@@ -132,7 +134,9 @@ export default function HomePage() {
 							</strong>
 						</label>
 					</div>
+				</div>
 
+				<div>
 					{/* Impact */}
 					<hr className='hr' />
 					<div className='col-5 mb-4'>
