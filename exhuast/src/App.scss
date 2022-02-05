@@ -1,0 +1,92 @@
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.total-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.navbar {
+	.navbar-content {
+		flex-basis: auto;
+		flex-grow: 0;
+	}
+}
+
+.login-container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.login-panel {
+		background: white;
+		width: 25rem;
+	}
+}
+
+body {
+	background: linear-gradient(30deg, #12c2e9, #c471ed, #f64f59);
+	background-size: 200% 200%;
+	animation: AnimationName 10s ease infinite;
+}
+
+@keyframes AnimationName {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.page-container {
+	max-width: 72rem;
+	width: 95%;
+	min-height: calc(100vh - 3.5rem);
+	height: 100%;
+	box-sizing: border-box;
+	background: white;
+}
+
+hr {
+	margin: 2.3rem 0 1.6rem;
+}
+
+.overview-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	& > div:nth-child(2) {
+		font-size: 150%;
+
+		& > *:nth-child(2) {
+			margin-top: -0.15rem;
+		}
+	}
+}
+
+.red {
+	color: #ff4560;
+}
+
+.blue {
+	color: #008ffb;
+}
+
+.history-item {
+	overflow: hidden;
+
+	* {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
