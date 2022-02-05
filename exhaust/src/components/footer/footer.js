@@ -1,47 +1,56 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Axios from '../../utils/Axios';
-import "./styles.css";
-
-export default function Navbar(props) {
-	async function logout() {
-		await Axios.post('/logout');
-		window.location.reload();
-	}
-
-
-	return (
-
-			<div className='collapse navbar-collapse navbar-content' id='navbarNav'>
-				<ul className='navbar-nav'>
-					<li className='nav-item'>
-						<Link className='nav-link' to='/'>
-							Home
-						</Link>
-					</li>
-					<li className='nav-item'>
-						<Link className='nav-link' to='/maps'>
-							Maps
-						</Link>
-					</li>
-					<li className='nav-item'>
-						<Link className='nav-link' to='/stats'>
-							Stats
-						</Link>
-					</li>
-					<li className='nav-item'>
-						<Link className='nav-link' to='/aboutus'>
-							About Us
-						</Link>
-					</li>
-					<li className='logout' onClick={logout}>
-						<Link className='logout' to='/'>
-							Logout
-						</Link>
-					</li>
-				</ul>
-			</div>
-
-
-	);
-}
+import React from "react";
+import {
+  Box,
+  Container,
+  Row,
+  Column,
+  FooterLink,
+  Heading,
+} from "./styles";
+  
+const Footer = () => {
+  return (
+    <Box>
+      <h1 style={{ color: "green", 
+                   textAlign: "center", 
+                   marginTop: "-50px" }}>
+        Exhuast: Shapping The Reality Around Us
+      </h1>
+      <Container>
+        <Row>
+          <Column>
+            <Heading>About Us</Heading>
+            <FooterLink href="/aboutus">Visit Page</FooterLink>
+            <FooterLink href="/contactus">Contact Us</FooterLink>
+          </Column>
+          <Column>
+            <Heading>Services</Heading>
+            <FooterLink href="/">Impact</FooterLink>
+            <FooterLink href="/">Activity</FooterLink>
+            <FooterLink href="/">History</FooterLink>
+            <FooterLink href="/stats">Statistics</FooterLink>
+            <FooterLink href="/maps">Maps</FooterLink>
+          </Column>
+          <Column>
+            <Heading>Social Media</Heading>
+            <FooterLink href="#">
+              <i className="fab fa-facebook-f">
+                <span style={{ marginLeft: "10px" }}>
+                  Facebook
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fab fa-instagram">
+                <span style={{ marginLeft: "10px" }}>
+                  Instagram
+                </span>
+              </i>
+            </FooterLink>
+          </Column>
+        </Row>
+      </Container>
+    </Box>
+  );
+};
+export default Footer;
