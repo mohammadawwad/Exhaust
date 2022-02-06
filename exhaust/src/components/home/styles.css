@@ -16,7 +16,7 @@ h2{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input, select {
+/* input, select {
     width: 30%;
     padding: 12px 20px;
     margin: 8px 10px;
@@ -24,18 +24,36 @@ input, select {
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-bottom: 15px;
+} */
+
+.add {
+    background-color: #04AA6D;
+    color: rgb(255, 255, 255);
+    border: 3px solid;
+    border-color: #04AA6D;
+    padding: 10px 5px;
+    margin: 8px 0;
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 10%;
+    border-radius: 10px;
+    transition: 200ms;
 }
 
-button {
-    background-color: #04AA6D;
+.add:hover {
+    background-color: #ffffff;
+    border: 3px solid; 
+    border-color: #04AA6D;;
     color: rgb(0, 0, 0);
     padding: 10px 5px;
     margin: 8px 0;
     margin-left: 15px;
-    border: none;
+    font-size: 20px;
     cursor: pointer;
     width: 10%;
     border-radius: 10px;
+    transition: 200ms;
 }
 
 .input-group-text{
@@ -214,3 +232,30 @@ td:hover {background-color: rgb(199, 199, 199);}
     padding: 50px 50px;
     border-radius: 20px;
 }
+
+.input-group{
+    width:40%;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.form-select{
+    background-color: #76a6f0;
+    border: 2px solid #a143df;
+    outline: #a143df;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-select option{
+    background-color: #f1f1f1;
+}
+.form-select option {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }

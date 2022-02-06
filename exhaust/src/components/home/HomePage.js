@@ -86,7 +86,7 @@ export default function HomePage() {
 							id='inputGroupSelect02'>
 							<option selected>Activity...</option>
 							{itemScoreBoard.map((el, index) => (
-								<option value={index}>{el.name}</option>
+								<option className="form-option" value={index}>{el.name}</option>
 							))}
 						</select>
 						<input
@@ -104,7 +104,7 @@ export default function HomePage() {
 							</label>
 						) : null}
 
-						<button onClick={submitEntry} className='btn btn-outline-secondary col-2'>
+						<button className="add" onClick={submitEntry}>
 							Add
 						</button>
 					</div>

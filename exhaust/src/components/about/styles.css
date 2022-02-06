@@ -18,9 +18,21 @@ img {
     border-radius: 20px;
 }
 
-h2{
+.background{
+    background-color: rgba(255, 255, 255, 0.521);
+    position: absolute;
+    width: 20%;
+    top: 450px;
+    margin-left: 37%;
+    margin-right: 50%;
+}
+
+.title{
     text-align: center;
     width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .grid-container {
@@ -36,11 +48,11 @@ h2{
     font-size: 30px;
 }
 
-.info{
+.text{
     color: rgb(0, 0, 0);
     text-align: center;
     border: none;
-    margin-top: 5px;
+    margin-top: 50px;
     margin-right: 10%;
     margin-left: 10%;
     font-size: 20px;
