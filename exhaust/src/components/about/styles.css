@@ -10,8 +10,8 @@ img {
 
 .page{
     width: 100%;
-    min-height: calc(100vh - 3.5rem);
-    height: 10%;
+    /* min-height: calc(100vh - 3.5rem);
+    height: 10%; */
     box-sizing: border-box;
     background: white;
     padding: 50px 50px;

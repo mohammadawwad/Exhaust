@@ -10,8 +10,8 @@
 
 .page{
     width: 100%;
-    min-height: calc(100vh - 3.5rem);
-    height: 100%;
+    /* min-height: calc(100vh - 3.5rem);
+    height: 100%; */
     box-sizing: border-box;
     background: white;
     padding: 20px 20px;

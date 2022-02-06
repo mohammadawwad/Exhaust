@@ -74,6 +74,7 @@ export default function HomePage() {
 	}
 
 	return (
+		<>
 		<div className='page mx-auto p-5 shadow' style={{ width: "100%"}}>
 			<div className='inner-container row mb-3 justify-content-around'>
 				<div className='inner-container'>
@@ -153,49 +154,71 @@ export default function HomePage() {
 							<p className="intro">Here you can see your total carbon emmisions you have created, on the left you can see the total amount of carbon produced from your activities in red. On the right hand side you can see how much carbon you have reduced in blue, this could be done by planting trees and recycling. In the middile the total shows you difference between the carbon you have produced and reduced. If it is red that means you are producing to much carbon and if it was blue that means you have negative carbon emission meaning you are doing great.</p>
 							</>
 						)}
-						<hr className='hr' />
-						<h5 className='history text-muted fw-normal my-4'>History</h5>
-						<p className="intro">All CO2 emmisions based of the last 30 days in your country</p>
-						<CountryHistoryChart data={placeholderHistoryData} />
 					</div>
 					
 
-					{/* Activity */}
-					<hr className='hr' />
-						<h2 className='myactivity'>Recent Activity</h2>
-						<p className="intro">Here you can view all the details regarding the activity you submited such as what you were doing, how much CO2 you pruduced and what day it was. You can also edit and delete them whenever you want.</p>
-
-						<table className="firstRow">
-							<tr className='d-flex align-items-center'>
-								<th>Activity:</th>
-								<th>Amount:</th>
-								<th>CO2:</th>
-								<th>Date:</th>
-							</tr>
-						</table>
-
-						{history === 'loading' ? (
-							<div className='spinner-border d-block mx-auto mt-5' role='status'>
-								<span className='visually-hidden'>Loading...</span>
-							</div>
-						) : (
-							
-							history.map(el => (
-								<table className='table'>
-									<tr>
-										<td>{el.name}</td>
-										<td className='table1'>
-											{el.amount} {el.unit}
-										</td>
-										<td>{el.co2}kg</td>
-										<td>{moment(el.createdAt).format('DD. MMM')}</td>
-									</tr>
-								</table>
-							))
-						)}
+					
 				</div>
 			</div>
 		</div>
+
+
+
+		{/* History */}
+		<div className='page mx-auto p-5 shadow' style={{ width: "100%"}}>
+			<div className='inner-container row mb-3 justify-content-around'>
+				<div>
+					<div className='col-5 mb-4'>
+						<h5 className='history text-muted fw-normal my-4'>History</h5>
+						<hr className='hr' />
+						<p className="intro">All CO2 emmisions based of the last 30 days in your country</p>
+						<CountryHistoryChart data={placeholderHistoryData} />
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		{/* Recent Activity */}
+		<div className='page mx-auto p-5 shadow' style={{ width: "100%"}}>
+			<div className='inner-container row mb-3 justify-content-around'>
+				<div>
+					<h2 className='myactivity'>Recent Activity</h2>
+					<hr className='hr' />
+					<p className="intro">Here you can view all the details regarding the activity you submited such as what you were doing, how much CO2 you pruduced and what day it was. You can also edit and delete them whenever you want.</p>
+
+					<table className="firstRow">
+						<tr className='d-flex align-items-center'>
+							<th>Activity:</th>
+							<th>Amount:</th>
+							<th>CO2:</th>
+							<th>Date:</th>
+						</tr>
+					</table>
+
+					{history === 'loading' ? (
+						<div className='spinner-border d-block mx-auto mt-5' role='status'>
+							<span className='visually-hidden'>Loading...</span>
+						</div>
+					) : (
+						
+						history.map(el => (
+							<table className='table'>
+								<tr>
+									<td>{el.name}</td>
+									<td className='table1'>
+										{el.amount} {el.unit}
+									</td>
+									<td>{el.co2}kg</td>
+									<td>{moment(el.createdAt).format('DD. MMM')}</td>
+								</tr>
+							</table>
+						))
+					)}
+				</div>
+			</div>
+		</div>
+		</>
 	);
 }
 
@@ -222,7 +245,7 @@ function Overview({ history }) {
 					<p className='mb-0 text-muted'>Reduced</p>
 					<h5 className='blue'>
 						{history
-							.reduce((total, el) => (total += Math.min(0, el.co2)), 0)
+							.reduce((total, el) => (total += Math.abs(Math.min(0, el.co2))), 0)
 							.toFixed(2)}
 						kg
 					</h5>
