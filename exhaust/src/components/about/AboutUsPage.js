@@ -19,7 +19,7 @@ export default function AboutUsPage() {
 	
 				<div class="imgcontainer" >
 					<div className="background">
-					<p className="title">About Us</p>
+					<p className="header">About Us</p>
 					</div>
 					<img src={require("./background3.png")} style={{width: "100%"}}  alt="Plant" class="plant"/>
 				</div>

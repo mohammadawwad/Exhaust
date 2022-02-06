@@ -30,6 +30,7 @@ const MapPage = () => {
   }, [])
 
   return isLoaded ? (
+    <>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
@@ -40,6 +41,12 @@ const MapPage = () => {
         { /* Child components, such as markers, info windows, etc. */ }
         <></>
       </GoogleMap>
+
+      <div style={{marginTop: "25px"}}>
+        <img src={require("./route.png")} style={{width: "45%", marginLeft: "2.5%", marginRight: "2.5%"}}  alt="Plant" class="plant"/>
+        <img src={require("./markets.png")} style={{width: "45%", marginLeft: "2.5%", marginRight: "2.5%"}}  alt="Plant" class="plant"/>
+      </div>
+    </>
   ) : <></>
 }
 
