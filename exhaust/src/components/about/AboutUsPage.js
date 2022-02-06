@@ -2,8 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Axios from '../../utils/Axios';
 import { countries } from '../../utils/Data';
 import "./styles.css";
+import {useHistory} from "react-router-dom";
 
 export default function AboutUsPage() {
+
+	const history = useHistory();
+
+	const contactUs = () => {
+		history.push("/contactus");
+	}
+
 
 	return (
 		<div className='page mx-auto p-5 shadow'>
@@ -41,9 +49,7 @@ export default function AboutUsPage() {
 					</div>  
 				</div>
 
-				<div class="imgcontainer" >
-					<img src={require("./arrow.png")} style={{width: "15%"}}  alt="Plant" class="plant"/>
-				</div>
+				<button className="contactUs" onClick={contactUs}>Contact Us</button>
 
 			</div>
 		</div>

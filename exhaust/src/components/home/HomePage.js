@@ -162,7 +162,7 @@ export default function HomePage() {
 
 					{/* Activity */}
 					<hr className='hr' />
-						<h2 className='myactivity'>My Activity</h2>
+						<h2 className='myactivity'>Recent Activity</h2>
 						<p className="intro">Here you can view all the details regarding the activity you submited such as what you were doing, how much CO2 you pruduced and what day it was. You can also edit and delete them whenever you want.</p>
 
 						<table className="firstRow">

@@ -4,6 +4,7 @@ import LoginPage from './components/register/LoginPage';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
+import ContactUs from './components/contact/ContactUs';
 import AboutUsPage from './components/about/AboutUsPage';
 import MapsPage from './components/maps/MapsPage';
 import { useEffect, useState } from 'react';
@@ -40,6 +41,7 @@ function App() {
 					{/* <Route path='/maps' exact component={MapsPage} /> */}
 					<Route path='/stats' exact component={Dashboard} />
 					<Route path='/aboutus' exact component={AboutUsPage} />
+					<Route path='/contactus' exact component={ContactUs} />
 				</Switch>
 				<Footer/>
 			</Router>
