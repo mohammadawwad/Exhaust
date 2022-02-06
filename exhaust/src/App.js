@@ -4,6 +4,7 @@ import LoginPage from './components/register/LoginPage';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
+import IntroPage from './components/intro/IntroPage';
 import ContactUs from './components/contact/ContactUs';
 import AboutUsPage from './components/about/AboutUsPage';
 import MapsPage from './components/maps/MapsPage';
@@ -29,7 +30,7 @@ function App() {
 			</div>
 		</div>
 	) : !isAuthed ? (
-		<LoginPage />
+		<IntroPage />
 	) : (
 		<div>
 			<Router>
@@ -42,6 +43,8 @@ function App() {
 					<Route path='/stats' exact component={Dashboard} />
 					<Route path='/aboutus' exact component={AboutUsPage} />
 					<Route path='/contactus' exact component={ContactUs} />
+					<Route path='/register' exact component={LoginPage} />
+					<Route path='/intro' exact component={HomePage} />
 				</Switch>
 				<Footer/>
 			</Router>

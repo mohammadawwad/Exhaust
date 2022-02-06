@@ -245,7 +245,7 @@ td:hover {background-color: rgb(206, 206, 206);}
 }
 
 .form-select{
-    background-color: #4399db;
+    background-color: #53b5ff;
     border: 2px solid #a143df;
     outline: #a143df;
     color: rgb(0, 0, 0);
@@ -271,7 +271,7 @@ td:hover {background-color: rgb(206, 206, 206);}
 
 .form-control{
     /* color: rgb(255, 255, 255); */
-    background-color: #4399db;
+    background-color: #53b5ff;
     border: 2px solid #a143df;
     font-weight: bold;
     outline: #a143df;
