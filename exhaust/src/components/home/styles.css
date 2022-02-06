@@ -31,7 +31,7 @@ h2{
     color: rgb(255, 255, 255);
     border: 3px solid;
     border-color: #04AA6D;
-    padding: 10px 5px;
+    padding: 5px 5px;
     margin: 8px 0;
     margin-left: 15px;
     font-size: 20px;
@@ -46,7 +46,7 @@ h2{
     border: 3px solid; 
     border-color: #04AA6D;;
     color: rgb(0, 0, 0);
-    padding: 10px 5px;
+    padding: 5px 5px;
     margin: 8px 0;
     margin-left: 15px;
     font-size: 20px;
@@ -61,8 +61,10 @@ h2{
     color: rgb(0, 0, 0);
     padding: 5px 5px;
     margin-left: 10px;
+    margin-right: 10px;
     margin-top: 10px;
     border: none;
+    align-items: center;
     width: 20%;
     outline: #575757;
     font-family: Arial, Helvetica, sans-serif;
@@ -233,21 +235,28 @@ td:hover {background-color: rgb(199, 199, 199);}
     border-radius: 20px;
 }
 
-.input-group{
-    width:40%;
-    margin-right: 30%;
-    margin-left: 30%;
+.label-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    margin-left: 32.5%;
+    margin-right: 32.5%;
 }
 
 .form-select{
-    background-color: #76a6f0;
+    background-color: #5eb9ff;
     border: 2px solid #a143df;
     outline: #a143df;
-    color: rgb(255, 255, 255);
-    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 10px;
     font-size: 16px;
     border: none;
+    width: 185px;
     cursor: pointer;
+    margin-right: 20px;
+    border-radius: 10px;
 }
 
 .form-select option{
@@ -258,4 +267,33 @@ td:hover {background-color: rgb(199, 199, 199);}
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
+}
+
+.form-control{
+    /* color: rgb(255, 255, 255); */
+    background-color: #5eb9ff;
+    border: 2px solid #a143df;
+    font-weight: bold;
+    outline: #a143df;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.topTitle{
+    width: 10%;
+    text-align: center;
+    margin-right: 45%;
+    margin-left: 45%;
+}
+
+.input-group{
+    width: 40%;
+    text-align: center;
+    margin-right: 30%;
+    margin-left: 30%;
+}

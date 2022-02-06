@@ -53,6 +53,7 @@ export default function Login() {
 						onChange={e => setName(e.target.value)}
 						className='inputForm my-3'
 						placeholder='Name'
+						required
 					/>
 				)}
 
@@ -61,6 +62,7 @@ export default function Login() {
 					onChange={e => setEmail(e.target.value)}
 					className='inputForm my-3'
 					placeholder='Email'
+					required
 				/>
 				{isRegister && (
 					<select 
@@ -80,6 +82,7 @@ export default function Login() {
 					onChange={e => setPassword(e.target.value)}
 					className='inputForm my-3'
 					placeholder='Password'
+					required
 				/>
 				<button className="login"
 					onClick={isRegister ? register : login}

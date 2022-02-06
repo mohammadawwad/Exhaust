@@ -16,7 +16,6 @@ li {
 li a {
   display: block;
   color: rgb(145, 145, 145);
-  transition: 150ms ease-in;
   font-size: 24px;
   text-align: center;
   padding: 14px 20px;

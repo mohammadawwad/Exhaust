@@ -78,7 +78,7 @@ export default function HomePage() {
 		<div className='page mx-auto p-5 shadow' style={{ width: "100%"}}>
 			<div className='inner-container row mb-3 justify-content-around'>
 				<div className='inner-container'>
-					<h2 className='mb-4'>Add Entry</h2>
+					<h2 className='topTitle'>Add Entry</h2>
 					<div className='input-group'>
 						<select
 							value={selectedActivity}
@@ -91,13 +91,13 @@ export default function HomePage() {
 							))}
 						</select>
 						<input
+							className='form-control'
 							value={amount}
 							onChange={e => setAmount(e.target.value)}
 							min={1}
 							placeholder='Amount'
 							type='number'
 							aria-label='amount'
-							className='form-control'
 						/>
 						{selectedActivity !== undefined && itemScoreBoard[selectedActivity].unit ? (
 							<label className='input-group-text' for='inputGroupSelect02'>
@@ -113,7 +113,7 @@ export default function HomePage() {
 
 				<div>
 
-					<div className='input-group mt-3'>
+					<div className='label-group mt-3'>
 						<label className='input-group-text col-5 d-flex' for='inputGroupSelect02'>
 							<span className='d-block' >
 								CO2 / Unit:
