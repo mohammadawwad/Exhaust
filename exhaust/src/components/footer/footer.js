@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "green", 
+      <h1 style={{ color: "#12be54", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
         Exhuast: Shapping The Reality Around Us

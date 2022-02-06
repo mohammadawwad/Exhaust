@@ -50,7 +50,7 @@ export const FooterLink = styled.a`
   font-family: Arial, Helvetica, sans-serif;
 
   &:hover {
-      color: green;
+      color: #0da547;
       transition: 200ms ease-in;
   }
 `;
