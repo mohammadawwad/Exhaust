@@ -31,6 +31,8 @@ const MapPage = () => {
 
   return isLoaded ? (
     <>
+
+      <div style={{marginBottom: "30px"}}></div>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
