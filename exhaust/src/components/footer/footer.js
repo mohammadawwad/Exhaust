@@ -14,7 +14,7 @@ const Footer = () => {
       <h1 style={{ color: "#12be54", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
-        Exhuast: Shapping The Reality Around Us
+        Exhuast: Shaping The Reality Around Us
       </h1>
       <Container>
         <Row>

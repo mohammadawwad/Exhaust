@@ -29,7 +29,7 @@ export default function AboutUsPage(Props) {
 					</div>
 
 					<div className="slogan">
-							<p className="title">Shapping The Reality Around Us</p>
+							<p className="title">Shaping The Reality Around Us</p>
 						</div>
 
 					<div>
