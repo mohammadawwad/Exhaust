@@ -40,7 +40,7 @@ const MapPage = () => {
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        { /* Child components, such as markers, info windows, etc. */ }
+        { /* Child components, such as markers, info windows, and more. */ }
         <></>
       </GoogleMap>
 
