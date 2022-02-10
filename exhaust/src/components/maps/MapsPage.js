@@ -6,6 +6,7 @@ const containerStyle = {
   height: '500px',
 };
 
+//center of map
 const center = {
   lat: 102,
   lng: 49
