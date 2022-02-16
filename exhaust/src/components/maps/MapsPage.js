@@ -1,6 +1,7 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
+//fix maps api
 const containerStyle = {
   width: '100%',
   height: '500px',
