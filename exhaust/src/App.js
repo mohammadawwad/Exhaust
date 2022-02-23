@@ -24,6 +24,7 @@ function App() {
 	}, []);
 
 	return isAuthed === 'loading' ? (
+		// loader
 		<div className='total-center'>
 			<div class='spinner-border' role='status'>
 				<span class='visually-hidden'>Loading...</span>
